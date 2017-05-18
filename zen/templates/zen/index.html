@@ -3,9 +3,12 @@
 {% if post_list %}
     <ul>
     {% for post in post_list %}
-        <li style="font-family:calibri;font-size:150%">
-        <a href="{% url 'zen:detail' post.id %}">{{ post.title }}</a>
-        </li>
+        <h5 style="text-align:center;font-family:calibri;font-size:150%">
+
+        <p></p>
+        <a href="{% url 'zen:detail' post.id %}" style="text-decoration:none; color:black;">{{ post.title }}
+        </a>
+        </h5>
     {% endfor %}
     </ul>
 {% else %}
