@@ -4,6 +4,7 @@ from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
 from django.views import generic
 from .models import Post
+from django.http import JsonResponse
 
 
 
@@ -19,5 +20,9 @@ def detail(request, post_id):
     post = get_object_or_404(Post, pk=post_id)
     return render(request, 'zen/detail.html', {'post': post})
 
+def fun(request):
+    return render(request, 'zen/fun.html')
+
 def home(request):
     return render(request, 'zen/home.html')
+
